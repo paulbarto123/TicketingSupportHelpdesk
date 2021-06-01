@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace API.Models
 {
-    [Table("TB_T_Status")]
+    [Table("TB_M_Status")]
     public class Status
     {
         [Key]

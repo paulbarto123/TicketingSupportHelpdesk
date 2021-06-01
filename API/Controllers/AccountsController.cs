@@ -1,4 +1,4 @@
-﻿//Hashing
+﻿ //Hashing
 using API.Base;
 using API.Context;
 using API.Handler;
