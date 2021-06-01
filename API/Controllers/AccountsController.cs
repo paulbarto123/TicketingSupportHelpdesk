@@ -1,4 +1,4 @@
-﻿//Hashing
+﻿ //Hashing
 using API.Base;
 using API.Context;
 using API.Handler;
@@ -117,7 +117,7 @@ namespace API.Controllers
             dbparams.Add("Phone", registerVM.PhoneNumber, DbType.String);
             dbparams.Add("Gender", registerVM.Gender, DbType.String);
             dbparams.Add("RoleId", registerVM.RoleId, DbType.Int32);
-            dbparams.Add("DepartmentId", registerVM.DepartmentId, DbType.Int32);
+            //dbparams.Add("DepartmentId", registerVM.DepartmentId, DbType.Int32);
 
             var result = Task.FromResult(dapper.Insert<int>("[dbo].[SP_Register]", dbparams, commandType: CommandType.StoredProcedure));
 
@@ -132,6 +132,7 @@ namespace API.Controllers
         [HttpPost("Login")]
         public ActionResult Login([FromBody] LoginVM loginVM)
         {
+           // LoginVM results = null;
             var dbparams = new DynamicParameters();
             dbparams.Add("Email", loginVM.Email, DbType.String);
             dynamic result = dapper.Get<dynamic>(
@@ -144,8 +145,10 @@ namespace API.Controllers
             {
                 var jwt = new JwtService(Configuration);
                 var token = jwt.LoginToken(result.Email, result.Name);
+               // results = token;
                 return Ok(new { token });
             }
+            //return results;
             return BadRequest("Wrong Password");
         }
 

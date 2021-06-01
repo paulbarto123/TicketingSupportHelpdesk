@@ -48,6 +48,21 @@ namespace API
             services.AddScoped<IGenericDapper, GeneralDapperr>();
             services.AddMvc();
 
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("MyPolicy",
+                    builder =>
+                    {
+                        builder
+                        .SetIsOriginAllowedToAllowWildcardSubdomains()
+                            .WithOrigins("https://localhost:44346")
+                            .AllowAnyMethod()
+                             .AllowCredentials()
+                            .AllowAnyHeader()
+                        .Build();
+                    });
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -84,7 +99,7 @@ namespace API
             });
 
             app.UseRouting();
-
+            app.UseCors("MyPolicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
