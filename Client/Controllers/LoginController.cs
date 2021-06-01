@@ -13,9 +13,16 @@ namespace Client.Controllers
             return View("Views/Login/index.cshtml");
         }
 
+<<<<<<< HEAD
         //public RedirectResult New()
         //{
         //    return Redirect("Views/Home/index.cshtml");
         //}
+=======
+        public RedirectResult New()
+        {
+            return Redirect("Views/Home/index.cshtml");
+        }
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
     }
 }

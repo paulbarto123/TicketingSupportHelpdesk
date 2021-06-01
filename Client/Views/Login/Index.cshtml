@@ -25,7 +25,11 @@
                             <div class="card-body">
                                 <div class="form-row mb-3" id="loginEmail">
                                     <label for="loginEmail" class="col-sm-3 col-form-label">Email</label>
+<<<<<<< HEAD
                                     <input type="email" id="emailLogin" class="form-control col-sm-9" placeholder="Ex. john.smith@gmail.com" name="loginEmail" required>
+=======
+                                    <input type="email" class="form-control col-sm-9" placeholder="Ex. john.smith@gmail.com" name="loginEmail" required>
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
                                     <div class="invalid-feedback col-sm-9 offset-3">
                                         Please provide an email correctly.
                                     </div>
@@ -35,7 +39,11 @@
                                 </div>
                                 <div class="form-row" id="loginPasword">
                                     <label for="loginPassword" class="col-sm-3 col-form-label">Password</label>
+<<<<<<< HEAD
                                     <input type="password"  id="passwordLogin" class="form-control col-sm-9" placeholder="Password here..." name="loginPassword" minlength="6" maxlength="12" required>
+=======
+                                    <input type="password" class="form-control col-sm-9" placeholder="Password here..." name="loginPassword" minlength="6" maxlength="12" required>
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
                                     <div class="invalid-feedback col-sm-9 offset-3">
                                         Password less then 6.
                                     </div>
@@ -46,7 +54,12 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
+<<<<<<< HEAD
                                 <button type="submit"  class="btn btn-info float-right" onclick="Login()">Sign in</button>
+=======
+                                <a  asp-area="" asp-controller="Home" asp-action="Index">Sign In</a>
+                                <button href="" type="submit" class="btn btn-info float-right">Sign in</button>
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
                             </div>
                             <!-- /.card-footer -->
 
@@ -216,6 +229,7 @@
             $('#genderFemale').prop("checked", false);
         }
 
+<<<<<<< HEAD
        function Login() {
         var Login = new Object();
         Login.Email = $("#emailLogin").val();
@@ -313,6 +327,38 @@
 
     </script>
     <script>
+=======
+        var ModalFlow = state => {
+            switch (state) {
+                case "forgot":
+                    $('#exampleModalLongTitle').text("Forgot Password");
+                    $('#buttonModal').text("Send Email");
+                    $('#registerName').hide();
+                    $('#registerPassword').hide();
+                    $('#registerPhone').hide();
+                    $('#registerGender').hide();
+                    $('#registerPhone').hide();
+                    $('#registerDate').hide();
+                    break;
+                case "register":
+                    $('#exampleModalLongTitle').text("Register");
+                    $('#buttonModal').text("Register");
+                    $('#registerName').show();
+                    $('#registerPassword').show();
+                    $('#registerPhone').show();
+                    $('#registerGender').show();
+                    $('#registerPhone').show();
+                    $('#registerDate').show();
+                    break;
+                default:
+                // code block
+            }
+        }
+
+
+    </script>
+    @*<script>
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
             // Example starter JavaScript for disabling form submissions if there are invalid fields
             (function () {
                 'use strict';
@@ -322,14 +368,26 @@
                     // Loop over them and prevent submission
                     var validation = Array.prototype.filter.call(forms, function (form) {
                         form.addEventListener('submit', function (event) {
+<<<<<<< HEAD
                             //if (form.checkValidity() === false) {
                                event.preventDefault();
                                 event.stopPropagation();
                             //}
                             //form.classList.add('was-validated');
+=======
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
                         }, false);
                     });
                 }, false);
             })();
+<<<<<<< HEAD
         </script>
+=======
+        </script>*@
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
 }

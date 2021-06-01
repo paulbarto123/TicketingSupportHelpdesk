@@ -23,6 +23,7 @@ namespace Client.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         public IActionResult Account()
         {
             return View();
@@ -33,6 +34,8 @@ namespace Client.Controllers
             return View();
         }
 
+=======
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
         public IActionResult Privacy()
         {
             return View();

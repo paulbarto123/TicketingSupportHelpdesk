@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+=======
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+<<<<<<< HEAD
+=======
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
 
 namespace Client
 {
@@ -50,7 +60,11 @@ namespace Client
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+<<<<<<< HEAD
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+=======
+                    pattern: "{controller=login}/{action=Index}/{id?}");
+>>>>>>> 877e21e73fe1e41d95b83f38d8a00f8a95857098
             });
         }
     }
